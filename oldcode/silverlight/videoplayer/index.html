@@ -1,0 +1,50 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Silverlight aka WPF/E</title>
+    <script type="text/javascript" src="js/Silverlight.js"></script>
+    <script type="text/javascript" src="js/videohandlers.js"></script>
+
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="vp">
+
+	<div id="content">
+    <div id="info">
+    	<h1>Silverlight<br />the artist formerly known as WPF/E</h1>
+    	
+    	<ul>
+       	<li>Click the main video to see full screen</li>
+        <li>
+	        Change background color 
+	        <a href="javascript:changeBG('black')">black</a> / 
+	        <a href="javascript:changeBG('white')">white</a>
+        </li>
+        </ul>
+     </div> 
+        
+      <div id="SLControl">hello</div>
+       
+		<script type="text/javascript">
+            Silverlight.createObjectEx({
+				source: "xaml/videoplayer.xaml",
+				parentElement: document.getElementById("SLControl"),
+				id: "WPFEMainPlayer",
+				properties: {
+					width: "400",
+					height: "325",
+					version: "0.8",
+					background:'#00000000',      // Background color of control.
+				    isWindowless: "true"
+				},
+				events: {
+					onLoad: root_Loaded
+				}
+			});
+		</script>
+        
+	</div>
+</body>
+</html>

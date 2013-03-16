@@ -1,0 +1,416 @@
+/**
+Reset
+*/
+html, body, div, span, object, iframe,
+h1, h3, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+   margin:0;
+   padding:0;
+   border:0;
+   outline:0;
+   font-size:100%;
+   vertical-align:baseline;
+   background:transparent;
+}
+
+body {
+   line-height:1em;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+   display:block;
+}
+
+nav ul {
+   list-style:none;
+}
+
+blockquote, q {
+   quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content:'';
+   content:none;
+}
+
+a {
+   margin:0;
+   padding:0;
+   font-size:100%;
+   vertical-align:baseline;
+   background:transparent;
+}
+
+ins {
+   background-color:#ff9;
+   color:#000;
+   text-decoration:none;
+}
+
+mark {
+   background-color:#ff9;
+   color:#000;
+   font-style:italic;
+   font-weight:bold;
+}
+
+del {
+   text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+   border-bottom:1px dotted;
+   cursor:help;
+}
+
+table {
+   border-collapse:collapse;
+   border-spacing:0;
+}
+
+hr {
+   display:block;
+   height:1px;
+   border:0;
+   border-top:1px solid #cccccc;
+   margin:1em 0;
+   padding:0;
+}
+
+input, select {
+   vertical-align:middle;
+}
+
+ol, ul, li {
+       list-style: none;
+       overflow: hidden;
+}
+
+article,
+header,
+footer,
+aside,
+hgroup {
+       overflow: hidden;
+}
+
+h1, h2, h3, h4 {
+	font-weight: normal;
+	line-height: 1.1em;
+}
+
+	
+/**
+*/
+body {
+	font-family: Georgia;
+	font-size: 15px;
+	color: #555;
+	padding-bottom: 600px;
+	padding: 20px;
+	line-height: 1.1em;
+}
+
+a {
+	color: #6f8393;
+}
+
+h1 {
+	font-size: 60px;
+	margin-bottom: 20px;
+}
+
+section {
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+
+#compass {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  font-family: "Georgia", Times, serif;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: #999999;
+  height: 40px;
+  padding-left: 70px;
+  padding-top: 20px;
+  line-height: 1.2em;
+}
+
+#peopleNav {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 99%;
+  margin-bottom: 10px;
+  font-family: "Georgia", Times, serif;
+  letter-spacing: 0.03em;
+}
+
+#peopleNav #findByName {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  color: #2c1a3d;
+  font-style: italic;
+  font-size: 13px;
+  padding: 1px 0 3px 20px;
+  cursor: pointer;
+}
+
+#peopleNav #nameList {
+  border-top: solid 1px #cccccc;
+  padding: 10px 0px;
+  margin: 10px auto 0 auto;
+  font-size: 14px;
+  display: none;
+}
+
+#peopleNav #nameList li {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 3px 15px 3px 10px;
+  background: url(img/dot.png) no-repeat right 9px;
+  cursor: pointer;
+}
+
+#peopleNav #nameList li:last-child {
+  background: none;
+}
+
+#people {
+  width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#people .sr-diamond {
+  width: 20px;
+  height: 30px;
+  margin: 0 auto 20px auto;
+}
+
+#people h2 {
+  font-family: "Georgia", Times, serif;
+  letter-spacing: 0.03em;
+  font-size: 24px;
+  color: #2c1a3d;
+  font-style: italic;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #cccccc;
+  margin-bottom: 20px;
+}
+
+#people #peoplePane {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 957px;
+  height: 957px;
+  border: solid 1px #cccccc;
+}
+
+#people #peoplePane #peopleList {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1452px;
+  left: 5px;
+  top: 5px;
+  background: url(img/bg_people.png);
+}
+
+#people #peoplePane #peopleList li {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 474px;
+  height: 474px;
+  float: left;
+  margin: 5px;
+  padding: 0px;
+  cursor: move;
+}
+
+#people #peoplePane #peopleList li .peoplePortrait {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+#people #peoplePane #peopleList li .peoplePortrait img {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 474px;
+  height: 474px;
+  background: #cccccc;
+}
+
+#people #peoplePane #peopleList li .peopleActions {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  position: absolute;
+  top: 10px;
+  right: -300px;
+  height: 40px;
+}
+
+#people #peoplePane #peopleList li .peopleActions li {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  background: #2c1a3d;
+  color: white;
+  padding: 6px 10px;
+  width: auto;
+  height: auto;
+  margin: 0 0 0 2px;
+  font-family: "Abel", sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#people #peoplePane #peopleList li .peopleActions .peopleHide, #people #peoplePane #peopleList li .peopleActions .peopleShrink {
+  display: none;
+}
+
+#people #peoplePane #peopleList li .peopleActions li.peopleZoom, #people #peoplePane #peopleList li .peopleActions li.peopleShrink {
+  padding-left: 25px;
+}
+
+#people #peoplePane #peopleList li .peopleActions li.peopleZoom {
+  background: #2c1a3d url(img/icon_zoom.png) no-repeat 5px 5px;
+}
+
+#people #peoplePane #peopleList li .peopleActions li.peopleShrink {
+  background: #2c1a3d url(img/icon_zoom_out.png) no-repeat 5px 5px;
+}
+
+#people #peoplePane #peopleList li .card {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-family: "Georgia", Times, serif;
+  letter-spacing: 0.03em;
+  display: none;
+  background: white;
+}
+
+#people #peoplePane #peopleList li .card h3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 472px;
+  height: 420px;
+  border: solid 1px #cccccc;
+  padding-top: 50px;
+  font-size: 26px;
+  color: #2c1a3d;
+}
+
+#people #peoplePane #peopleList li .card p {
+  font-size: 16px;
+  color: #2c1a3d;
+  font-style: italic;
+  margin: 100px auto 0 auto;
+  padding-bottom: 25px;
+  border-bottom: solid 1px #cccccc;
+  width: 75%;
+}
+
+#people #peoplePane #peopleList .personalItems {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 85%;
+  height: auto;
+  margin: 20px auto 0 auto;
+  text-align: center;
+}
+
+#people #peoplePane #peopleList .personalItems li {
+  width: 100%;
+  height: auto;
+  line-height: 1.2em;
+  margin: 0 0 10px 0;
+  font-size: 14px;
+}
+
+#people #peoplePane #peopleList .personalItems li strong {
+  color: #2c1a3d;
+}
+
+.sprite {
+	background: url(img/sprites.png) no-repeat 0 0;
+}
+
+.sr-arrow_left {
+  background-position: 0 0;
+}
+.sr-arrow_left_sm {
+  background-position: 0 -120px;
+}
+.sr-arrow_right {
+  background-position: 0 -186px;
+}
+.sr-compass {
+  background-position: 0 -306px;
+}
+.sr-diamond {
+  background-position: 0 -413px;
+}
+.sr-grid {
+  background-position: 0 -885px;
+}
+.sr-grid:hover, .on .sr-grid {
+  background-position: 0 -950px;
+}
+.sr-handle {
+  background-position: 0 -1015px;
+}
+.sr-list {
+  background-position: 0 -1085px;
+}
+.sr-list:hover, .on .sr-list {
+  background-position: 0 -1149px;
+}
+
+

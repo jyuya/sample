@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>39Clues - the Game</title>
+
+	<script type="text/javascript" src="js/lib/flow-animate.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/global.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/dialogue.js" charset="utf-8"></script>
+
+	<style type="text/css">
+		#frame {
+			margin: 10px auto;
+			width: 988px;
+			height: 605px;
+			background:#000000 url(img/game/bg_node2.jpg) no-repeat;
+			position: relative;
+		}
+		
+		ul#nodeText, #question, #answer {
+			color: black;
+			font-family: arial;
+			font-weight: bold;
+			font-size: 17px;
+		}
+		
+		#question, #answer {
+			width: 0px;
+			height: 0px;
+			position: absolute;
+		}
+		
+		#question {
+			background: url(img/game/bg_yellow.png) no-repeat left bottom;
+		}
+		
+		#answer {
+			background: url(img/game/bg_white.png) no-repeat left bottom;
+		}
+		
+		#question span, #answer span {
+			display: block;
+		}
+		
+		em {
+			font-style: italic;
+		}
+		
+		#question span, .npc span {
+			color: red;
+		}
+		#answer span, .player span {
+			color: #0099cc;
+		}
+		
+		a#next {
+			position: absolute;
+			top: 397px;
+			left: 835px;
+			width: 89px;
+			height: 71px;
+			padding: 10px 0 0 10px;
+		}
+		
+		a#next span{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 89px;
+			height: 71px;
+			background: url(img/game/btn_next.png) no-repeat;
+		}
+		
+		a#next:hover span {
+			background-position: 0 -73px;
+		}
+		
+		ul#nodeText .npc {
+			background-color: #ff9900;
+		}
+		
+		ul#nodeText .player {
+			background-color: #fff;
+		}
+		
+		ul#nodeText {
+			margin: 0 0 0 384px;
+			padding-top: 151px;
+		}
+		
+		ul#nodeText .npc, ul#nodeText .player {
+			width: 350px;
+			margin-bottom: 10px;
+			padding: 5px;
+			opacity: 0.8;
+		}
+		
+		ul#nodeText span {
+			display: block;
+		}
+		
+	</style>
+</head>
+<body>
+
+<div id="frame">
+	<img src="img/game/mcclain.gif" style="position: absolute; top: 95px; left: 25px; "/>
+	<div id="question"></div>
+	<div id="answer"></div>
+	
+	<ul id="nodeText">
+		<li class="npc"><span>George:</span>Why are you staring at me?</li>
+		<li class="player"><span>Player:</span>I was wondering if you knew anything about Anne Cahill.</li>
+		<li class="npc"><span>George:</span>Never heard of her. Who is she?</li>
+		<li class="player"><span>Player:</span>She was a woman from this town who died on the Titanic.</li>
+		<li class="npc"><span>George:</span>Get your facts straight, kid. I’m a Titanic expert and there was no Anne Cahill on the ship. Trust me, I’d remember if I’d seen that last name on a passenger list.</li>
+		<li class="player"><span>Player:</span>I also have a passenger list.</li>
+		<li class="npc"><span>George:</span>Well, then take a closer look. Some people use a fake name when they travel, especially if they have something to hide.</li>
+		<li class="player"><span>Player:</span>Thanks. So what are you doing here? On vacation?</li>
+		<li class="npc"><span>George:</span>More like family business.</li>
+		<li class="player"><span>Player:</span>Well, thanks for your help.</li>
+		<li class="npc"><span>George:</span>See ya.</li>
+	</ul>
+
+	
+	<a href="#" id="next">next<span><!-- ir --></span></a>
+</div>
+
+</body>
+</html>

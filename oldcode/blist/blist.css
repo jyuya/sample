@@ -1,0 +1,311 @@
+/**
+ * @fileoverview:   Nokia Juniper Blacklist Stylesheet
+ * @author:         Julia Yu
+ * @company:        Schematic, Inc.
+ * @version:        1.0
+**/
+
+/* login
+------------------------------------------------ */
+
+#blist {
+	padding: 0 15px 20px 15px;
+}
+
+#blist a {
+	color: #44aa33;
+}
+
+#blist form {
+	margin: 0 0px 20px 0px;
+	overflow: hidden;
+}
+
+#blist form p {
+	color: #666;
+	font-style:italic;
+}
+
+#blist form p.error {
+	color: #ff0000;
+	font-style: normal;
+}
+
+#blist h2 {
+	font-size: 20px;
+	margin: 10px 0px 10px 0px;
+}
+
+/* search form
+------------------------------------------------ */
+#blist #searchForm fieldset {
+	overflow: hidden;
+}
+
+#blist #searchForm #searchTerm {
+	width: 300px;
+}
+
+#blist #searchForm label {
+	float: left;
+	margin-right: 10px;
+}
+
+/* pagination
+------------------------------------------------ */
+.paginateWrap {
+	overflow: hidden;
+	width: 100%;
+}
+
+.paginate {
+	overflow: hidden;
+	margin: 10px 0;
+	float: right;
+}
+
+
+.paginate li {
+	float: left;
+	margin: 0 5px 0 0;
+}
+
+.nextSet, 
+.prevSet {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+/* user list
+------------------------------------------------ */
+
+#userList {
+	border: solid 1px #ccc;
+	border-bottom: none;
+	overflow: hidden;
+	width: 947px;
+	margin-bottom: 10px;
+}
+
+#userList li {
+	padding: 10px 0;
+	background: #efefef url(ico_unblock.png) no-repeat 900px 8px;
+	border-bottom: solid 1px #ccc;
+}
+
+#userList li.blocked {
+	background-image: url(ico_block.png);
+}
+
+#userList > li:nth-child(odd) { background-color : #efefef }
+#userList > li:nth-child(even) { background-color : #fff }
+
+
+#userList li a.userLink {
+	padding: 0 10px;
+	font-weight: bold;
+	display: block;
+	width: 100%;
+	overflow: hidden;
+}
+
+#userList li.blocked a.userLink {
+  color: #C11B17;
+}
+
+/* user detail
+------------------------------------------------ */
+
+#userList .detail {
+	border-top: solid 1px #ccc;
+	margin: 10px 0 -10px 0;
+	overflow: hidden;
+	background: #fff;
+}
+
+#userList .userInfo,
+#userList .userHistory, 
+#userList .userComments {
+	float: left;
+	padding: 10px;
+	width: 285px;
+	margin-right: 5px;
+	background: none;
+}
+
+#userList .userDetail {
+	background: none;
+	font-size: 12px;
+}
+
+#userList .userDetail li {
+	border: none;
+	background: none;
+	padding: 5px 0;
+}
+
+#userList .userDetail li span {
+	font-weight: bold;
+}
+
+#userList .detail {
+	width: 100%;
+	overflow: hidden;
+	display: none;
+}
+
+#userList .userActions {
+	text-align: right;
+	overflow: hidden;
+	width: 946px;
+	border-bottom: solid 1px #ccc;
+	position: relative;
+	padding-top: 60px;
+}
+
+#userList .userActions .blockAction {
+	color: #fff;
+	font-weight: bold;
+	background: #44aa33;
+	padding: 5px;
+	display: block;
+	display: inline;
+	text-decoration: none;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+}
+
+#userList .blocked .userActions .blockAction {
+	background: #C11B17;
+}
+
+#userList .detail h3, 
+#userList .detail h3 a {
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#userList .detail h3 {
+	margin-bottom: 10px;
+	padding: 5px;
+	background: #44aa33;
+	float: none;
+}
+
+#userList .blocked .detail h3 {
+	background: #C11B17;
+}
+
+#userList .chronoList li {
+	background-image: none;
+	padding: 5px;
+}
+
+#userList .chronoList li span {
+	font-weight: bold;
+}
+
+#userList .commentList,
+#userList .historyList {
+	display: none;
+}
+
+#userList .blockDetail {
+	text-align: left;
+	background: #efefef;
+	padding: 20px 10px 10px 10px;
+	overflow: hidden;
+	display: none;
+	width: 927px;
+}
+
+#userList .blockDetail h3 {
+	font-weight: bold;
+	font-size: 12px;
+	margin: 5px 0;
+}
+
+#userList .blockDetail form {
+	overflow: hidden;
+	margin: 0;
+}
+
+#userList .blockDetail fieldset {
+}
+
+#userList .blockDetail textarea {
+	background: #fff;
+	border: solid 1px #ccc;
+}
+
+#userList .blockDone,
+#userList .blockConfirm {
+	margin: 20px auto;
+	z-index: 100;
+	background: #fff;
+	border: solid 1px #ccc;
+	padding: 10px;
+	width: 200px;
+	text-align: center;
+	display: none;
+}
+
+#userList .blockDone p,
+#userList .blockConfirm p {
+	text-align: left;
+	font-weight: bold;
+	margin: 0 0 20px 0;
+}
+
+#userList .blockConfirm a {
+	background: #44aa33;
+	padding: 3px 10px;
+	color: #fff;
+	font-weight: bold;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	text-decoration: none;
+}
+
+#userList .blocked .blockConfirm a {
+	background: #C11B17;
+}
+
+#userList .blockMessage {
+	color: #C11B17;
+	font-weight: bold;
+	text-align: center;
+	margin: 10px 0 0 0;
+	display: none;
+}
+
+#userList .formError {
+	color: #C11B17;
+	margin: 10px 0;
+	display: none;
+}
+
+#userList .blocked .blockMessage {
+	display: block;
+}
+
+#userList .userActions .blockBtn {
+	display: block;
+}
+
+#userList .userActions .unblockBtn {
+	display: none;
+}
+
+#userList .blocked .userActions .blockBtn {
+	display: none;
+}
+
+#userList .blocked  .userActions .unblockBtn {
+	display: block;
+}

@@ -1,0 +1,317 @@
+/* line 17, ../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*mixins ----------------------------------------- ** / */
+/* line 4, ../../app/assets/stylesheets/base.css.sass */
+.controlGroup {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 600px;
+  margin: 10px auto;
+}
+
+/* line 9, ../../app/assets/stylesheets/base.css.sass */
+button {
+  border: solid 1px #666666;
+  background: #fcfcfc;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* line 15, ../../app/assets/stylesheets/base.css.sass */
+button:hover, button.selected {
+  background: #cccccc;
+  color: white;
+}
+/* line 7, /Users/juliayu/Sites/foc/views/css/base.sass */
+body {
+
+font-family: helvetica, verdana, arial;
+}
+
+header {
+	width: 600px;
+	margin: 10px auto 50px auto;
+	display: block;
+	overflow: hidden;
+	color: #666;
+	text-align: center;
+}
+
+h1 {
+	font-family: Georgia, Times;
+	font-size: 40px;
+	margin: 20px auto;
+	text-align: center;
+}
+
+header p {
+	font-size: 14px;
+	line-height: 1.2em;
+}
+
+/*mixins ----------------------------------------- ** / */
+/* line 3, ../../app/assets/stylesheets/paint.css.sass */
+#drawContainer {
+  display: block;
+  border: solid 1px #cccccc;
+  margin: 10px auto;
+  width: 600px;
+  height: 450px;
+}
+
+/* line 11, ../../app/assets/stylesheets/paint.css.sass */
+#drawSurface {
+  opacity: 0.5;
+}
+
+/* line 15, ../../app/assets/stylesheets/paint.css.sass */
+.color {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  border: solid 3px #cccccc;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  text-indent: -9999em;
+  cursor: pointer;
+}
+
+/* line 24, ../../app/assets/stylesheets/paint.css.sass */
+.color:hover, .color.selected {
+  border-color: black;
+}
+
+/* line 27, ../../app/assets/stylesheets/paint.css.sass */
+#red {
+  background-color: #ff3300;
+}
+
+/* line 30, ../../app/assets/stylesheets/paint.css.sass */
+#orange {
+  background-color: #ff9900;
+}
+
+/* line 33, ../../app/assets/stylesheets/paint.css.sass */
+#purple {
+  background-color: #6600cc;
+}
+
+/* line 36, ../../app/assets/stylesheets/paint.css.sass */
+#pink {
+  background-color: #ff33cc;
+}
+
+/* line 39, ../../app/assets/stylesheets/paint.css.sass */
+#yellow {
+  background-color: yellow;
+}
+
+/* line 42, ../../app/assets/stylesheets/paint.css.sass */
+#green {
+  background-color: #009900;
+}
+
+/* line 45, ../../app/assets/stylesheets/paint.css.sass */
+#blue {
+  background-color: #0066cc;
+}
+
+/* line 48, ../../app/assets/stylesheets/paint.css.sass */
+#black {
+  background-color: black;
+}
+
+/* line 51, ../../app/assets/stylesheets/paint.css.sass */
+#white {
+  background-color: white;
+}
+
+/* line 54, ../../app/assets/stylesheets/paint.css.sass */
+#erase {
+  background: url(nothing.png) no-repeat center center;
+}
+
+/* line 58, ../../app/assets/stylesheets/paint.css.sass */
+.size {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  text-indent: -9999em;
+  cursor: pointer;
+}
+/* line 66, ../../app/assets/stylesheets/paint.css.sass */
+.size span {
+  margin: 0 auto;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: solid 1px black;
+}
+
+/* line 75, ../../app/assets/stylesheets/paint.css.sass */
+.size:hover span {
+  border: solid 1px black;
+}
+
+/* line 78, ../../app/assets/stylesheets/paint.css.sass */
+.size.selected {
+  background: #cccccc;
+}
+/* line 81, ../../app/assets/stylesheets/paint.css.sass */
+.size.selected span {
+  background-color: white;
+}
+
+/* line 84, ../../app/assets/stylesheets/paint.css.sass */
+#size1 span {
+  width: 1px;
+  height: 1px;
+  margin: -1px 0 0 -1px;
+}
+
+/* line 89, ../../app/assets/stylesheets/paint.css.sass */
+#size2 span {
+  width: 5px;
+  height: 5px;
+  margin: -3px 0 0 -3px;
+}
+
+/* line 94, ../../app/assets/stylesheets/paint.css.sass */
+#size3 span {
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+}
+
+/* line 99, ../../app/assets/stylesheets/paint.css.sass */
+#size4 span {
+  width: 15px;
+  height: 15px;
+  margin: -8px 0 0 -8px;
+}
+
+/* line 104, ../../app/assets/stylesheets/paint.css.sass */
+#size5 span {
+  width: 25px;
+  height: 25px;
+  margin: -13px 0 0 -13px;
+}
+
+/* line 110, ../../app/assets/stylesheets/paint.css.sass */
+.brush {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 31px;
+  height: 31px;
+  margin-right: 10px;
+  text-indent: -9999em;
+  cursor: pointer;
+}
+/* line 118, ../../app/assets/stylesheets/paint.css.sass */
+.brush span {
+  margin: 0 auto;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  top: 50%;
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  border: solid 1px black;
+}
+
+/* line 129, ../../app/assets/stylesheets/paint.css.sass */
+#round span {
+  border-radius: 50%;
+  margin: -14px 0 0 -14px;
+}
+
+/* line 134, ../../app/assets/stylesheets/paint.css.sass */
+#square span {
+  width: 23px;
+  height: 23px;
+  margin: -13px 0 0 -13px;
+}
+
+#test {
+	overflow: hidden;
+	margin: 0 auto;
+	text-align: center;
+}

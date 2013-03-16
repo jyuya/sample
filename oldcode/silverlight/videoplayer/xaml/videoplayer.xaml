@@ -1,0 +1,102 @@
+<Canvas xmlns="http://schemas.microsoft.com/client/2007"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Canvas x:Name="MultiScreen">
+
+    <!-- MAIN VIDEO -->
+    <MediaElement x:Name="Video" Stretch="Fill" Canvas.Top="0" Canvas.Left="0" Height="200" Width="275" />
+
+    <!-- DOWN REFLECTION -->
+    <MediaElement x:Name="VideoReflectDown" Canvas.Top="200" Canvas.Left="0"  Height="200" Width="275" Stretch="Fill" Opacity="0.75">
+      <MediaElement.RenderTransform>
+        <TransformGroup>
+          <SkewTransform x:Name="downSkew"/>
+          <ScaleTransform x:Name="downScale"/>
+        </TransformGroup>
+      </MediaElement.RenderTransform>
+      <MediaElement.OpacityMask>
+        <LinearGradientBrush x:Name="downMask" StartPoint="0.5,0.0" EndPoint="0.5,1.0">
+          <GradientStop Offset="0.345" Color="#00000000" />
+          <GradientStop Offset="1.0" Color="#CC000000" />
+        </LinearGradientBrush>
+      </MediaElement.OpacityMask>
+    </MediaElement>
+
+    <!-- SIDE REFLECTION -->
+    <MediaElement x:Name="VideoReflectSide" Canvas.Top="0" Canvas.Left="275"  Height="200" Width="275" Stretch="Fill" Opacity="0.45">
+      <MediaElement.RenderTransform>
+        <TransformGroup>
+          <SkewTransform x:Name="sideSkew"/>
+          <ScaleTransform x:Name="sideScale"/>
+        </TransformGroup>
+      </MediaElement.RenderTransform>
+      <MediaElement.OpacityMask>
+        <LinearGradientBrush x:Name="sideMask" StartPoint="1.0,0.5" EndPoint="0.0,0.5">
+          <GradientStop Offset="0.345" Color="#00000000" />
+          <GradientStop Offset="1.0" Color="#CC000000" />
+        </LinearGradientBrush>
+      </MediaElement.OpacityMask>
+    </MediaElement>
+  </Canvas>
+
+  <!--  INFORMATION TABS -->
+  <Canvas x:Name="Information" Canvas.Top="210" Width="275">
+    <Canvas Canvas.Top="0" Canvas.Left="0">
+      <Rectangle x:Name="StatusBar2" Width="150" Height="15"  Stretch="Fill" StrokeLineJoin="Round" Fill="#fff" Stroke="#ccc" Opacity="0.3"/>
+      <TextBlock x:Name="VideoName" FontFamily="Verdana" FontSize="11" Canvas.Left="5"/>
+    </Canvas>
+
+    <Canvas Canvas.Top="0"  Canvas.Left="185">
+      <Rectangle Width="90" Height="15"  Stretch="Fill" StrokeLineJoin="Round" Fill="#fff" Stroke="#ccc" Opacity="0.3"/>
+      <TextBlock FontFamily="Verdana" FontSize="11" Canvas.Left="5" >
+        <Run x:Name="VideoCurrentLength">00:00</Run> / <Run x:Name="VideoLength">00:00</Run>
+      </TextBlock>
+    </Canvas>
+  </Canvas>
+
+  <!-- VIDEO CONTROLS -->
+  <Canvas x:Name="VideoControls" Canvas.Top="230" Canvas.Left="0" Width="275" Height="70">
+    
+    <Canvas x:Name="PlayButton">
+      <Rectangle x:Name="PlayBG" Width="25" Height="25" Canvas.Left="0" Canvas.Top="0" Stretch="Fill" StrokeLineJoin="Round" Stroke="#666" Fill="#aaa" StrokeThickness="3" Opacity="0.5" RadiusX="5" RadiusY="5"/>
+      <Path x:Name="PlayIcon" Width="13" Height="13" Canvas.Left="7" Canvas.Top="6" Stretch="Fill" Stroke="#666" Fill="#fff" Data="F1 M 80.5588,50.2939L 34.3025,23.5878L 34.3025,77L 80.5588,50.2939 Z "/>
+    </Canvas>
+
+    <Canvas x:Name="PauseButton" Opacity="0">
+      <Rectangle x:Name="PauseBG" Width="25" Height="25" Canvas.Left="0" Canvas.Top="0" Stretch="Fill" StrokeLineJoin="Round" Stroke="#666" Fill="#aaa" StrokeThickness="3" Opacity="0.5" RadiusX="5" RadiusY="5"/>
+      <Rectangle x:Name="PauseIchi" Width="5" Height="11" Canvas.Left="7" Canvas.Top="7" Stretch="Fill" StrokeLineJoin="Round" Stroke="#666" Fill="#fff"/>
+      <Rectangle x:Name="PauseNi" Width="5" Height="11" Canvas.Left="13" Canvas.Top="7" Stretch="Fill" StrokeLineJoin="Round" Stroke="#666" Fill="#fff"/>
+    </Canvas>
+
+    <Canvas x:Name="StopButton" Canvas.Left="30">
+      <Rectangle x:Name="StopBG" Width="25" Height="25" Canvas.Left="0" Canvas.Top="0" Stretch="Fill" StrokeLineJoin="Round" Stroke="#666" Fill="#aaa" StrokeThickness="3" Opacity="0.5" RadiusX="5" RadiusY="5"/>
+      <Rectangle x:Name="StopIcon" Width="11" Height="11" Canvas.Left="7" Canvas.Top="7" Stretch="Fill" StrokeLineJoin="Round" Stroke="#666" Fill="#fff"/>
+    </Canvas>
+
+    <Canvas x:Name="VolumeHitArea" Canvas.Left="160" Canvas.Top="-10" Opacity="1">
+      <Rectangle Width="150" Height="80" Canvas.Left="5" Canvas.Top="10" Stretch="Fill" Fill="#fff" />
+    </Canvas>
+
+    <Canvas x:Name="StatusBars" Canvas.Left="60" Canvas.Top="5" >
+      <Rectangle x:Name="DefaultStatus" Width="185" Height="10" Canvas.Left="0" Canvas.Top="3" Stretch="Fill" StrokeLineJoin="Round" Stroke="#999999"/>
+      <Rectangle x:Name="LoadStatus" Width="0" Height="8" Canvas.Left="1" Canvas.Top="4" Stretch="Fill" StrokeLineJoin="Round" Fill="#ffcc00"/>
+      <Rectangle x:Name="PlayHead" Width="5" Height="16" Canvas.Left="0" Canvas.Top="0" Stretch="Fill" StrokeLineJoin="Round" Stroke="#999999" Fill="#ffffff"/>
+    </Canvas>
+
+    <Canvas x:Name="NoteButton" Canvas.Left="248" Canvas.Top="0" Width="22" Height="22">
+      <Path x:Name="NoteIcon" Canvas.Left="2" Canvas.Top="4" Width="20" Height="18"  Opacity="0.6" Stretch="Fill" StrokeLineJoin="Round" Stroke="#fff" Fill="#fff" Data="F1 M 131.258,108.67C 132.209,108.67 133.069,108.933 133.687,109.356L 133.687,95.9756L 133.79,95.9756L 133.79,95.9524L 146.407,95.9524L 146.407,96.0801L 146.441,96.0801L 146.441,110.743C 146.51,110.925 146.547,111.115 146.547,111.311C 146.547,112.577 145.022,113.603 143.142,113.603C 141.262,113.603 139.737,112.577 139.737,111.311C 139.737,110.045 141.262,109.019 143.142,109.019C 144.04,109.019 144.857,109.253 145.466,109.635L 145.466,101.842L 134.663,101.842L 134.663,110.753L 134.649,110.753L 134.663,110.962C 134.663,112.228 133.138,113.255 131.258,113.255C 129.378,113.255 127.853,112.228 127.853,110.962C 127.853,109.696 129.378,108.67 131.258,108.67 Z M 145.466,97.9041L 134.663,97.9041L 134.663,99.8907L 145.466,99.8907L 145.466,97.9041 Z "/>
+      <Rectangle x:Name="NoteBG" Width="27" Height="27" Canvas.Left="0" Canvas.Top="0" Stretch="Fill" StrokeLineJoin="Round" Fill="#aaa" Opacity="0.01" RadiusX="5" RadiusY="5"/>
+    </Canvas>
+    
+    <Canvas x:Name="VolumeSlider" Canvas.Left="171" Canvas.Top="20" Opacity="0">
+      <Canvas Opacity="0.2">
+        <Rectangle Width="90" Height="20" Canvas.Left="5" Canvas.Top="10" Stretch="Fill" Fill="#666" RadiusX="5" RadiusY="5"/>
+        <Path Width="9" Height="14" Canvas.Left="78" Canvas.Top="0" Stretch="Fill" Fill="#666" Data="F1 M 87.6302,0L 78.9678,11.4463L 88.1076,14.3466L 87.6302,0 Z "/>
+      </Canvas>
+      <Canvas x:Name="VolumeScaleArea">
+        <Rectangle x:Name="VolumeScale" Width="75" Height="6" Canvas.Left="12" Canvas.Top="17" Stretch="Fill" Fill="#fff" Stroke="#aaa" Opacity="1"/>
+        <Path x:Name="VolumeHead" Width="10" Height="12" Canvas.Left="45" Canvas.Top="18" Stretch="Fill" StrokeLineJoin="Round" Stroke="#666" Fill="#fff" Data="F1 M 157.333,142.517L 152.333,155.472L 162.333,155.472L 157.333,142.517 Z "/>
+      </Canvas>
+  </Canvas>
+
+  </Canvas>
+</Canvas>

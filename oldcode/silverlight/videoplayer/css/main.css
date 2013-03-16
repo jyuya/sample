@@ -1,0 +1,43 @@
+* {
+	padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color:White;
+    color:#444444;
+    font: 76%/1.6 "Trebuchet MS", Verdana, Helvetica, Arial;
+}
+
+#content {
+	margin: auto;
+	text-align: left;	
+	width: 750px;
+}
+
+#info {
+	float: left;
+	width: 300px;
+	margin: 50px 10px;
+	font-size: 1em;
+	text-align: right;
+}
+
+#MainPlayer {
+	margin-top: 50px;
+    width: 400px;
+    float: left;
+}
+
+h1 {
+    color: #556B2F;
+    font-size: 1.2em;
+}
+
+a {
+    color: #556B2F;
+}
+
+ul li {
+	list-style-type: none;
+}

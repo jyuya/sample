@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Need Want
+    </title>
+    <link href='base.css' rel='stylesheet' type='text/css' />
+    <script src='jquery-1.9.1.min.js' type='text/javascript'></script>
+    <script src='transit.js' type='text/javascript'></script>
+
+    <script src='screen.js' type='text/javascript'></script>
+
+  </head>
+  <body>
+	<header>
+		<h1>Tile Flip Demo</h1>
+		<button id="insert">Insert into pos 5</button>
+		<p>Animated using Transit.js, on a random timer the tiles flip to show the other side. When a new tile is added, it flips vertically instead of horizontally. If items are repeatedly added, the animation is pushed into a queue. Made for 16x9 LCD screen.</p>
+		
+	</header>
+	
+    <div id='screen'>
+      <div class='rows' id='screen1'>
+        <div class='row row1'>
+          <div class='flip' id='f1'>
+            <div class='want'>
+              <div class='flipContent'>
+                
+                <p>A hot coffee</p>
+              </div>
+            </div>
+            <div class='need'>
+              <div class='flipContent'>
+                
+                <p>Caffeine</p>
+              </div>
+            </div>
+          </div>
+          <div class='flip' id='f2'>
+            <div class='want'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+            <div class='need'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='row row2'>
+          <div class='flip'>
+            <div class='want'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+            <div class='need'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+          </div>
+          <div class='flip' id='f3'>
+            <div class='want'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+            <div class='need'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+          </div>
+          <div class='flip' id='f4'>
+            <div class='want'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+            <div class='need'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+          </div>
+          <div class='flip' id='f5'>
+            <div class='want'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+            <div class='need'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+          </div>
+          <div class='flip'>
+            <div class='want'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+            <div class='need'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='row row3'>
+          <div class='flip' id='f6'>
+            <div class='want'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+            <div class='need'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+          </div>
+          <div class='flip' id='f7'>
+            <div class='want'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+            <div class='need'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+          </div>
+          <div class='flip' id='f8'>
+            <div class='want'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+            <div class='need'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+          </div>
+          <div class='flip' id='f9'>
+            <div class='want'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+            <div class='need'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='row row4'>
+          <div class='flip'>
+            <div class='want'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+            <div class='need'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+          </div>
+          <div class='flip' id='f10'>
+            <div class='want'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+            <div class='need'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+          </div>
+          <div class='flip' id='f11'>
+            <div class='want'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+            <div class='need'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+          </div>
+          <div class='flip' id='f12'>
+            <div class='want'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+            <div class='need'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+          </div>
+          <div class='flip'>
+            <div class='want'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+            <div class='need'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='row row5'>
+          <div class='flip' id='f13'>
+            <div class='want'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+            <div class='need'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+          </div>
+          <div class='flip' id='f14'>
+            <div class='want'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+            <div class='need'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+          </div>
+          <div class='flip' id='f15'>
+            <div class='want'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+            <div class='need'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+          </div>
+          <div class='flip' id='f16'>
+            <div class='want'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+            <div class='need'>
+              <div class='flipContent'>
+                
+                <p>Taco bell dorito shell taco. stat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='placeholder'>
+          <div class='hex'>
+            <div class='flipContent'>placeholder</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

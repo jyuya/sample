@@ -1,0 +1,291 @@
+/* line 17, /opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, /opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, /opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, /opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, /opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, /opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, /opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, /opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, /opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*mixins ----------------------------------------- ** / */
+@font-face {
+  font-family: "gotham bold";
+  src: url("/img/Gotham/GothaBol.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "gotham med";
+  src: url("/img/Gotham/GothaMed.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "gotham lig";
+  src: url("/img/Gotham/GothaLig.ttf") format("truetype");
+}
+
+/* line 4, /Users/juliayu/Sites/defiance/views/css/base.sass */
+body {
+  color: white;
+  font-family: "gotham med", helvetica, arial;
+  font-size: 14px;
+  line-height: 1.2em;
+}
+
+/* line 10, /Users/juliayu/Sites/defiance/views/css/base.sass */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/*mixins ----------------------------------------- ** / */
+@font-face {
+  font-family: "gotham bold";
+  src: url("/img/Gotham/GothaBol.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "gotham med";
+  src: url("/img/Gotham/GothaMed.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "gotham lig";
+  src: url("/img/Gotham/GothaLig.ttf") format("truetype");
+}
+
+/*-------------------------------------- screen styles */
+/* line 4, /Users/juliayu/Sites/defiance/views/css/screen.sass */
+#screen {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  background: url("/img/bg_lcd.jpg") no-repeat 0 0;
+  width: 1920px;
+  height: 1080px;
+z-index: 50;
+}
+
+/* line 10, /Users/juliayu/Sites/defiance/views/css/screen.sass */
+.flip {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 334px;
+  height: 290px;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* line 17, /Users/juliayu/Sites/defiance/views/css/screen.sass */
+.flip .flipContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 80px 0 0 0;
+  width: 334px;
+  text-align: center;
+}
+/* line 23, /Users/juliayu/Sites/defiance/views/css/screen.sass */
+.flip .flipContent h2 {
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+/* line 29, /Users/juliayu/Sites/defiance/views/css/screen.sass */
+.flip .flipContent p {
+  width: 160px;
+  margin: 40px auto 0 auto;
+  line-height: 1.3em;
+  font-size: 20px;
+  word-wrap: break-word;
+}
+
+/* line 36, /Users/juliayu/Sites/defiance/views/css/screen.sass */
+.need {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 334px;
+  height: 290px;
+  background: url("tile_blue_lcd.png") no-repeat 0 0;
+  z-index: 5;
+}
+/* line 41, /Users/juliayu/Sites/defiance/views/css/screen.sass */
+.need h2 {
+  color: #99ccff;
+}
+
+/* line 44, /Users/juliayu/Sites/defiance/views/css/screen.sass */
+.want {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 334px;
+  height: 290px;
+  background: url("tile_purple_lcd.png") no-repeat 0 0;
+  z-index: 4;
+}
+/* line 49, /Users/juliayu/Sites/defiance/views/css/screen.sass */
+.want .flipContent {
+  display: none;
+}
+/* line 52, /Users/juliayu/Sites/defiance/views/css/screen.sass */
+.want .flipContent h2 {
+  color: #e6d5f8;
+}
+
+/* line 55, /Users/juliayu/Sites/defiance/views/css/screen.sass */
+.hex {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 334px;
+  height: 290px;
+  z-index: 6;
+  background: url("tile_grey_lcd.png") no-repeat 0 0;
+  display: none;
+  color: white;
+}
+/* line 62, /Users/juliayu/Sites/defiance/views/css/screen.sass */
+.hex .flipContent {
+  display: none;
+}
+
+/* line 65, /Users/juliayu/Sites/defiance/views/css/screen.sass */
+.rows {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1080px;
+  top: 63px;
+  left: 0;
+}
+
+/* line 73, /Users/juliayu/Sites/defiance/views/css/screen.sass */
+.row {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  height: 290px;
+  width: 3840px;
+}
+/* line 78, /Users/juliayu/Sites/defiance/views/css/screen.sass */
+.row .flip {
+  margin-right: 195px;
+}
+
+/* line 82, /Users/juliayu/Sites/defiance/views/css/screen.sass */
+.row1 #f1, .row1 #f17 {
+  margin-right: 1252px;
+}
+
+/* line 85, /Users/juliayu/Sites/defiance/views/css/screen.sass */
+.row2, .row4 {
+  margin-left: -265px;
+  margin-top: -140px;
+}
+
+/* line 90, /Users/juliayu/Sites/defiance/views/css/screen.sass */
+.row3, .row5 {
+  margin-left: 0px;
+  margin-top: -140px;
+}
+
+header {
+	width: 600px;
+	margin: 10px auto -140px auto;
+	display: block;
+	overflow: hidden;
+	color: #666;
+	text-align: center;
+	z-index: 999;
+	display: block;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	margin-left: -300px;
+}
+
+h1 {
+	font-family: Georgia, Times;
+	font-size: 40px;
+	margin: 20px auto;
+	text-align: center;
+}
+
+header p {
+	font-size: 14px;
+	line-height: 1.2em;
+}
+
