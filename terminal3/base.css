@@ -1,0 +1,404 @@
+/* line 17, /opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, /opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, /opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, /opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, /opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, /opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, /opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, /opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, /opt/local/lib/ruby1.9/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*mixins ----------------------------------------- ** / */
+/* line 4, /Users/juliayu/Sites/foc/views/css/base.sass */
+a:active, a {
+  outline: none;
+}
+
+/* line 7, /Users/juliayu/Sites/foc/views/css/base.sass */
+body {
+ 	background-color: #000;
+font-family: helvetica, verdana, arial;
+}
+
+h1 {
+	color: #fff;
+	font-family: Georgia, Times;
+	font-size: 40px;
+	margin: 20px auto;
+	text-align: center;
+}
+
+
+#stores {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 960px;
+}
+
+/* line 302, /Users/juliayu/Sites/foc/views/css/base.sass */
+#stores ul, #stores li, .top, .bottom {
+  width: 960px;
+  display: block;
+  overflow: hidden;
+  background: black;
+}
+
+/* line 309, /Users/juliayu/Sites/foc/views/css/base.sass */
+#stores {
+  margin: 50px auto;
+  background: black;
+}
+/* line 313, /Users/juliayu/Sites/foc/views/css/base.sass */
+#stores li {
+  height: 28px;
+  position: relative;
+  border-bottom: solid 1px black;
+  margin-bottom: 10px;
+}
+/* line 320, /Users/juliayu/Sites/foc/views/css/base.sass */
+#stores li.hasContent {
+  border-bottom: solid 1px white;
+}
+/* line 323, /Users/juliayu/Sites/foc/views/css/base.sass */
+#stores li.last {
+  border: none;
+}
+
+/* line 326, /Users/juliayu/Sites/foc/views/css/base.sass */
+.top, .bottom {
+  height: 10px;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+}
+
+/* line 332, /Users/juliayu/Sites/foc/views/css/base.sass */
+.top {
+  border-bottom: solid 3px black;
+}
+
+/* line 336, /Users/juliayu/Sites/foc/views/css/base.sass */
+.old, .new {
+  height: 20px;
+  width: 960px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+/* line 345, /Users/juliayu/Sites/foc/views/css/base.sass */
+.bottom .old, .bottom .new {
+  top: -11px;
+}
+
+/* line 349, /Users/juliayu/Sites/foc/views/css/base.sass */
+.tile {
+  display: block;
+  overflow: hidden;
+  height: 20px;
+  width: 22px;
+  padding: 0px;
+  position: absolute;
+  left: 0;
+  background: black url("letters.png") no-repeat 0 0;
+  text-indent: -9999em;
+}
+
+/* line 361, /Users/juliayu/Sites/foc/views/css/base.sass */
+.top .tile {
+  bottom: 0;
+}
+
+/* line 365, /Users/juliayu/Sites/foc/views/css/base.sass */
+.bottom .tile {
+  top: 0;
+}
+
+/* line 369, /Users/juliayu/Sites/foc/views/css/base.sass */
+.top .old .tile {
+  z-index: 5;
+}
+
+/* line 373, /Users/juliayu/Sites/foc/views/css/base.sass */
+.top .new .tile {
+  z-index: 4;
+}
+
+/* line 377, /Users/juliayu/Sites/foc/views/css/base.sass */
+.bottom .old .tile {
+  z-index: 4;
+}
+
+/* line 381, /Users/juliayu/Sites/foc/views/css/base.sass */
+.bottom .new .tile {
+  z-index: 5;
+  height: 0px;
+}
+
+/* line 386, /Users/juliayu/Sites/foc/views/css/base.sass */
+.blank {
+  background-position: 70px 70px;
+}
+
+/* line 389, /Users/juliayu/Sites/foc/views/css/base.sass */
+.a {
+  background-position: 0 0;
+}
+
+/* line 391, /Users/juliayu/Sites/foc/views/css/base.sass */
+.and {
+  background-position: 0 -70px;
+}
+
+/* line 393, /Users/juliayu/Sites/foc/views/css/base.sass */
+.apos {
+  background-position: 0 -140px;
+}
+
+/* line 395, /Users/juliayu/Sites/foc/views/css/base.sass */
+.b {
+  background-position: 0 -210px;
+}
+
+/* line 397, /Users/juliayu/Sites/foc/views/css/base.sass */
+.c {
+  background-position: 0 -280px;
+}
+
+/* line 399, /Users/juliayu/Sites/foc/views/css/base.sass */
+.d {
+  background-position: 0 -350px;
+}
+
+/* line 401, /Users/juliayu/Sites/foc/views/css/base.sass */
+.dash {
+  background-position: 0 -420px;
+}
+
+/* line 403, /Users/juliayu/Sites/foc/views/css/base.sass */
+.divide {
+  background-position: 0 -490px;
+}
+
+/* line 405, /Users/juliayu/Sites/foc/views/css/base.sass */
+.e {
+  background-position: 0 -560px;
+}
+
+/* line 407, /Users/juliayu/Sites/foc/views/css/base.sass */
+.eight {
+  background-position: 0 -630px;
+}
+
+/* line 409, /Users/juliayu/Sites/foc/views/css/base.sass */
+.f {
+  background-position: 0 -700px;
+}
+
+/* line 411, /Users/juliayu/Sites/foc/views/css/base.sass */
+.five {
+  background-position: 0 -770px;
+}
+
+/* line 413, /Users/juliayu/Sites/foc/views/css/base.sass */
+.four {
+  background-position: 0 -840px;
+}
+
+/* line 415, /Users/juliayu/Sites/foc/views/css/base.sass */
+.g {
+  background-position: 0 -910px;
+}
+
+/* line 417, /Users/juliayu/Sites/foc/views/css/base.sass */
+.h {
+  background-position: 0 -980px;
+}
+
+/* line 419, /Users/juliayu/Sites/foc/views/css/base.sass */
+.i {
+  background-position: 0 -1050px;
+}
+
+/* line 421, /Users/juliayu/Sites/foc/views/css/base.sass */
+.j {
+  background-position: 0 -1120px;
+}
+
+/* line 423, /Users/juliayu/Sites/foc/views/css/base.sass */
+.k {
+  background-position: 0 -1190px;
+}
+
+/* line 425, /Users/juliayu/Sites/foc/views/css/base.sass */
+.l {
+  background-position: 0 -1260px;
+}
+
+/* line 427, /Users/juliayu/Sites/foc/views/css/base.sass */
+.m {
+  background-position: 0 -1330px;
+}
+
+/* line 429, /Users/juliayu/Sites/foc/views/css/base.sass */
+.n {
+  background-position: 0 -1400px;
+}
+
+/* line 431, /Users/juliayu/Sites/foc/views/css/base.sass */
+.nine {
+  background-position: 0 -1470px;
+}
+
+/* line 433, /Users/juliayu/Sites/foc/views/css/base.sass */
+.o {
+  background-position: 0 -1540px;
+}
+
+/* line 435, /Users/juliayu/Sites/foc/views/css/base.sass */
+.one {
+  background-position: 0 -1610px;
+}
+
+/* line 437, /Users/juliayu/Sites/foc/views/css/base.sass */
+.p {
+  background-position: 0 -1680px;
+}
+
+/* line 439, /Users/juliayu/Sites/foc/views/css/base.sass */
+.period {
+  background-position: 0 -1750px;
+}
+
+/* line 441, /Users/juliayu/Sites/foc/views/css/base.sass */
+.q {
+  background-position: 0 -1820px;
+}
+
+/* line 443, /Users/juliayu/Sites/foc/views/css/base.sass */
+.r {
+  background-position: 0 -1890px;
+}
+
+/* line 445, /Users/juliayu/Sites/foc/views/css/base.sass */
+.s {
+  background-position: -72px 0;
+}
+
+/* line 447, /Users/juliayu/Sites/foc/views/css/base.sass */
+.seven {
+  background-position: -72px -70px;
+}
+
+/* line 449, /Users/juliayu/Sites/foc/views/css/base.sass */
+.six {
+  background-position: -72px -140px;
+}
+
+/* line 451, /Users/juliayu/Sites/foc/views/css/base.sass */
+.t {
+  background-position: -72px -210px;
+}
+
+/* line 453, /Users/juliayu/Sites/foc/views/css/base.sass */
+.three {
+  background-position: -72px -280px;
+}
+
+/* line 455, /Users/juliayu/Sites/foc/views/css/base.sass */
+.two {
+  background-position: -72px -350px;
+}
+
+/* line 457, /Users/juliayu/Sites/foc/views/css/base.sass */
+.u {
+  background-position: -72px -420px;
+}
+
+/* line 459, /Users/juliayu/Sites/foc/views/css/base.sass */
+.v {
+  background-position: -72px -490px;
+}
+
+/* line 461, /Users/juliayu/Sites/foc/views/css/base.sass */
+.w {
+  background-position: -72px -560px;
+}
+
+/* line 463, /Users/juliayu/Sites/foc/views/css/base.sass */
+.x {
+  background-position: -72px -630px;
+}
+
+/* line 465, /Users/juliayu/Sites/foc/views/css/base.sass */
+.y {
+  background-position: -72px -700px;
+}
+
+/* line 467, /Users/juliayu/Sites/foc/views/css/base.sass */
+.z {
+  background-position: -72px -770px;
+}
+
+/* line 469, /Users/juliayu/Sites/foc/views/css/base.sass */
+.zero {
+  background-position: -72px -840px;
+}
+
