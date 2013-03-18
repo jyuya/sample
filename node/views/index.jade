@@ -1,0 +1,7 @@
+.content
+	h1= title
+	ul
+		- var pages = ["controls", "image", "video"]
+		each page in pages
+			li
+				a(href='/#{page}')= page

@@ -1,0 +1,4 @@
+#controls.content
+	- var pages = {"one" : "Zen01", "two" : "Vitality01", "three" : "Romanticism01", "four" : "Zen02", "five" : "Vitality02", "six" : "Romanticism02"}
+	each page, pageID in pages
+		a(href='/#{pageID}', rel='#{page}', id='#{pageID}')= page		
