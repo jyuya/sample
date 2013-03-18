@@ -74,6 +74,28 @@ body {
 	font-family: helvetica, verdana, arial;
 }
 
+h1 {
+	-webkit-animation-duration: 3s;
+	-webkit-animation-name: slidein;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	font-size: 20px;
+	border: solid 1px red;
+	width: 200px;
+}
+ 
+@-webkit-keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+ 
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
 #wrap {
 	width: 600px;
 	height: 600px;
