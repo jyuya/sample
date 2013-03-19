@@ -41,8 +41,24 @@ FOC.Stores = function (D) {
 	// some kind of transition ended
 	// put new into old
 	var handleTransitEnd = function(e) {
-		count++;
-		console.log(e.target); // put new into old
+		var itemData = $(e.target).data();
+	
+
+		if (itemData.top) {
+			var newItem = board[itemData.row].top.newTiles[itemData.tile];
+			var oldItem = board[itemData.row].top.oldTiles[itemData.tile];
+			
+			$(oldItem).html($(newItem).html());	
+			$(oldItem).addClass("notransition").removeClass("tileHide");		
+		}
+		
+		if (itemData.bottom) {
+			var newItem = board[itemData.row].bottom.newTiles[itemData.tile];
+			var oldItem = board[itemData.row].bottom.oldTiles[itemData.tile];
+			
+			$(oldItem).html($(newItem).html());			
+			$(newItem).addClass("notransition").addClass("tileHide");	
+		}
 	};
 	
 	/** do the top animation
@@ -52,6 +68,7 @@ FOC.Stores = function (D) {
 		if (newSpeed < 0 ) { newSpeed = 0; }
 		
 		$(item).addClass("tileHide");
+		$(item).data({row : rowNum, tile: tileNum, top: true, bottom: false });
 		
 		// $(item).animate(
 		// 	{  height: '0px', easing: "easeOutExpo" },  newSpeed, 
@@ -73,6 +90,7 @@ FOC.Stores = function (D) {
 		if (newSpeed < 0 ) { newSpeed = 0; }
 		
 		$(item).addClass("tileShow");
+		$(item).data({row : rowNum, tile: tileNum, top: false, bottom: true });
 		
 		// $(item).animate(
 		// 	{ top: 0, height: '54px', easing: "easeOutExpo"  },  newSpeed, 
@@ -338,6 +356,10 @@ FOC.Stores = function (D) {
 			getStores();
 			makeBoard();
 			makeAlphaList("i");
+			$("#test").click(function(){
+				$("div", storeListItems).removeClass("notransition");
+				makeAlphaList("z");
+			});
 		}
 	}
 }(document);

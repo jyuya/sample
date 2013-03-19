@@ -66,6 +66,10 @@ h1 {
 	overflow: hidden;
 }
 
+.old .tile {
+/*	background: red;*/
+}
+
 .bottom .old, .bottom .new {
 	top: -11px;
 }
@@ -116,12 +120,15 @@ h1 {
 	height: 0px;
 }
 
-.tileHide {
+#stores .tileHide {
 	height: 0px;
 }
 
-.bottom .new .tileShow {
+#stores .tileShow {
 	-webkit-transform: translateY(0);
 	height: 54px;
 }
 
+.notransition {
+  -webkit-transition: none !important;
+}
