@@ -30,6 +30,15 @@ FOC.Stores = function (D) {
 	    return Math.floor(Math.random() * (max - min + 1)) + min;
 	};
 	
+	// test func for speed
+	var timeIt = function(script){
+		var start = new Date();
+		script();
+		return new Date() - start;
+	};
+	
+	// listen to global events
+	
 	/** do the top animation
 	*/
 	var shrinkTop = function(item, rowNum, tileNum) {
@@ -177,12 +186,6 @@ FOC.Stores = function (D) {
 		}
 			
 		// $(storeList).bind("flipped", handleFlipped);		 
-	};
-	
-	var timeIt = function(script){
-		var start = new Date();
-		script();
-		return new Date() - start;
 	};
 	
 	/** make one row of tiles worth of htmls
