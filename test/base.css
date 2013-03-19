@@ -97,24 +97,31 @@ h1 {
 }
 
 #wrap {
-	width: 600px;
-	height: 600px;
+	overflow: hidden;
+	width: 100px;
+	height: 100px;
 	margin: 0 auto;
-	border: solid 1px red;
 	position: relative;
 	background: red;
 }
 
 #box {
-	margin: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100px;
 	height: 100px;
 	background: #ccc;
+	overflow: hidden;
+	-webkit-transform-origin: 0% 0%;
 	-webkit-transition: width 1s ease, height 1s ease, background-color 1s ease, -webkit-transform 2s;
 }
 
-/*#box:hover{
-	width: 200px;
+#box:hover{
+/*	width: 200px;
 	height: 200px;
 	background: #ffcc00;
-}*/
+	*/
+	-webkit-transform: scaleY(0);
+	
+}

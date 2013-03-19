@@ -19,7 +19,7 @@ SAMPLE.Test = function(){
 	
 	return {
 		init : function(){
-			testAnimate();
+			// testAnimate();
 		}
 	}
 }();

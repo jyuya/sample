@@ -1,0 +1,107 @@
+body {
+	background: #000;
+	color: #fff;
+}
+
+h1 {
+	color: #fff;
+	font-family: Georgia, Times;
+	font-size: 40px;
+	margin: 20px auto;
+	text-align: center;
+}
+
+#stores {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	width: 960px;
+	margin: 50px auto;
+	padding: 0;
+	list-style-type: none;
+}
+
+#stores ul, #stores li, .top, .bottom {
+	width: 960px;
+	display: block;
+	overflow: hidden;
+	background: black;
+}
+
+#stores li {
+	height: 28px;
+	position: relative;
+	border-bottom: solid 1px black;
+	margin-bottom: 10px;
+}
+
+#stores li.hasContent {
+	border-bottom: solid 1px white;
+}
+
+#stores li.last {
+	border: none;
+}
+
+.top, .bottom {
+	height: 10px;
+	overflow: hidden;
+	position: relative;
+	margin: 0;
+}
+
+.top {
+	border-bottom: solid 3px black;
+}
+
+.old, .new {
+  	height: 20px;
+	width: 960px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+.bottom .old, .bottom .new {
+	top: -11px;
+}
+
+.tile {
+	display: block;
+	overflow: hidden;
+	height: 20px;
+	width: 22px;
+	padding: 0px;
+	position: absolute;
+	left: 0;
+/*	background: black url("letters.png") no-repeat 0 0;
+	text-indent: -9999em;*/
+}
+
+.top .tile {
+	bottom: 0;
+}
+
+.bottom .tile {
+	top: 0;
+}
+
+.top .old .tile {
+	z-index: 5;
+}
+
+.top .new .tile {
+	z-index: 4;
+}
+
+.bottom .old .tile {
+	z-index: 4;
+}
+
+.bottom .new .tile {
+  	z-index: 5;
+	height: 0px;
+}
+
+
