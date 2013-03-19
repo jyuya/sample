@@ -93,14 +93,14 @@ h1 {
 	bottom: 0;
 	-webkit-transform: translateY(0);
 	-webkit-transform-origin: 0% 0%;
-	-webkit-transition: height 1s ease, -webkit-transform 1s ease;
+	-webkit-transition: height 2s ease, -webkit-transform 2s ease;
 }
 
 .bottom .tile {
 	top: 0;	
 	-webkit-transform: translateY(0);
 	-webkit-transform-origin: 100% 100%;
-	-webkit-transition: height 1s ease, -webkit-transform 1s ease;
+	-webkit-transition: height 2s ease, -webkit-transform 2s ease;
 }
 
 .top .old .tile {

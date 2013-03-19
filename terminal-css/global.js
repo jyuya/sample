@@ -57,7 +57,7 @@ FOC.Stores = function (D) {
 			var oldItem = board[itemData.row].bottom.oldTiles[itemData.tile];
 			
 			$(oldItem).html($(newItem).html());			
-			$(newItem).addClass("notransition").addClass("tileHide");	
+			$(newItem).addClass("notransition").removeClass("tileShow").addClass("tileHide");	
 		}
 	};
 	
