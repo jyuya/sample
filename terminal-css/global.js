@@ -22,6 +22,7 @@ FOC.Stores = function (D) {
 		animating = false,
 		FLIP_SPEED = 400,
 		OFFSET_SPEED = 100,
+		count = 0,
 		rowHeight;
 		
 	/** get a random number
@@ -37,17 +38,20 @@ FOC.Stores = function (D) {
 		return new Date() - start;
 	};
 	
-	// listen to global events
+	// some kind of transition ended
+	// put new into old
+	var handleTransitEnd = function(e) {
+		count++;
+		console.log(e.target); // put new into old
+	};
 	
 	/** do the top animation
 	*/
 	var shrinkTop = function(item, rowNum, tileNum) {
-		
 		var newSpeed = FLIP_SPEED  - FLIP_SPEED * (0.035 * tileNum);
 		if (newSpeed < 0 ) { newSpeed = 0; }
 		
 		$(item).addClass("tileHide");
-
 		
 		// $(item).animate(
 		// 	{  height: '0px', easing: "easeOutExpo" },  newSpeed, 
@@ -229,7 +233,7 @@ FOC.Stores = function (D) {
 		for (var i=0; i < max_row; i++) {		
 			allRows += makeRow();
 		}	
-		storeList.append(allRows);
+		storeList.append(allRows).css("visibility", "visible");
 	};
 	
 	/** MAKE WITH DOM TEST --- IT SEEMS SLOWER?! ------------------------------------
@@ -289,6 +293,7 @@ FOC.Stores = function (D) {
 		}
 		
 		D.getElementById("stores").appendChild(frag.cloneNode(true));
+		
 	};
 	
 	/** END TEST CASE ------------------------------------
@@ -322,6 +327,10 @@ FOC.Stores = function (D) {
 			bRow.bottom.newTiles = bRow.bottom.row.find(".new div");
 			bRow.bottom.oldTiles = bRow.bottom.row.find(".old div");
 		};
+		
+		$(storeList).bind("webkitTransitionEnd", handleTransitEnd);
+		
+		$("body").css("visibility", "visible");
 	};
 
 	return {

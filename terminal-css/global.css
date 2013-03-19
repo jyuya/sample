@@ -1,6 +1,8 @@
 body {
 	background: #000;
 	color: #fff;
+	visibility: hidden;
+	font-family: "helvetica neue", helvetica, arial;
 }
 
 h1 {
@@ -19,9 +21,10 @@ h1 {
 	margin: 50px auto;
 	padding: 0;
 	list-style-type: none;
+	visibility: hidden;
 }
 
-#stores ul, #stores li, .top, .bottom {
+#stores li, .top, .bottom {
 	width: 960px;
 	display: block;
 	overflow: hidden;
@@ -122,6 +125,3 @@ h1 {
 	height: 54px;
 }
 
-.js #fouc {
-	visibility: hidden;
-}
