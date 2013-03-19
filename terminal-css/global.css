@@ -75,16 +75,25 @@ h1 {
 	padding: 0px;
 	position: absolute;
 	left: 0;
-/*	background: black url("letters.png") no-repeat 0 0;
-	text-indent: -9999em;*/
+	text-transform: uppercase;
+	font-size: 20px;
+	text-align: center;
+	background: #000;
+	-webkit-transition: height 1s ease, -webkit-transform 2s ease;
 }
+
+
 
 .top .tile {
 	bottom: 0;
+	-webkit-transform: translateY(0);
+	-webkit-transform-origin: 100% 100%;
 }
 
 .bottom .tile {
 	top: 0;
+	-webkit-transform: translateY(0);
+	-webkit-transform-origin: 0% 0%;
 }
 
 .top .old .tile {
@@ -104,4 +113,11 @@ h1 {
 	height: 0px;
 }
 
+.tileHide {
+	height: 0px;
+}
 
+.bottom .new .tileShow {
+	-webkit-transform: translateY(0);
+	height: 54px;
+}
