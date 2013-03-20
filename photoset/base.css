@@ -1,0 +1,92 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* sample styles */
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	font-size: 1em;
+	line-height: 1em;
+	color: #fff;
+	background: #000;
+	text-align: center;
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 1.2em;
+	margin: 10px 0;
+}
+
+#controls {
+	margin: 10px auto;
+}
+
+#notice {
+	font-size: 0.8em;
+	color: #ccc;
+	display: inline;
+}
+
+button {
+	border: solid 1px #fff;
+	background: #000;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	cursor: pointer;
+	margin: 0 10px;
+}
+
+button:hover {
+	background: #fff;
+	color: #000;
+}
+
+button.off {
+	opacity: 0.5;
+	filter: alpha(opacity = 50);
+	cursor: default;
+}
+
+button.off:hover {
+	background: #000;
+	color: #fff;
+}
+
+#set {
+	position: relative;
+}
+
+#set li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #000;
+}
+
+#set li.off {
+	visibility: hidden;
+}
+
+h2 {
+	font-size: 1.2em;
+	margin: 5px 0;
+	line-height: 1.2em;
+}
+
+h3 {
+	font-size: 0.8em;
+	font-style: italic;
+}
+
+/*.photo {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.photo img {
+	max-width: 100%;
+	height: auto;
+}*/

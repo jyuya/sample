@@ -1,0 +1,9 @@
+//
+// Prefix header for all source files of the 'BBCMedals' target in the 'BBCMedals' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+	#import "UIViewAdditions.h"
+#endif
