@@ -21,7 +21,7 @@
 		e.dataTransfer.effectAllowed = 'move';
 		e.dataTransfer.setData('text/html', currentDragLi.innerHTML);
 
-		e.dataTransfer.setDragImage(dragIcon, 100, 100);
+		e.dataTransfer.setDragImage(dragIcon, 0, 0);
 
 		currentDragLi.classList.add('dragging');
 		return false;
@@ -65,7 +65,7 @@
 			e.target.parentElement.classList.remove("over");
 			
 			var newLi = document.createElement("li");
-			newLi.innerHTML = currentDragLi.innerHTML;	
+			newLi.innerHTML = e.dataTransfer.getData('text/html');	
 			photoList.insertBefore(newLi, e.target.parentElement);
 			photoList.removeChild(currentDragLi);
 			

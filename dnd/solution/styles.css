@@ -130,12 +130,15 @@ h1 {
 
 .handle {
 	position: absolute;
-	top: 45%;
-	left: 3%;
+	top: 0;
+	left: 0;
+	height: 100%;
+	padding: 30% 0 0 0;
 	color: #fff;
 	font-family: "General Foundicons";
 	-webkit-transition: -webkit-transform 0.5s ease-out;
 	-webkit-transform: translateX(-100px);
+	border-left: solid 10px #000;
 }
 
 .over .handle {
