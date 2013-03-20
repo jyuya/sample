@@ -131,14 +131,14 @@ h1 {
 .handle {
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: -2px;
 	height: 100%;
 	padding: 30% 0 0 0;
 	color: #fff;
 	font-family: "General Foundicons";
 	-webkit-transition: -webkit-transform 0.5s ease-out;
 	-webkit-transform: translateX(-100px);
-	border-left: solid 10px #000;
+	border-left: solid 15px #000;
 }
 
 .over .handle {
