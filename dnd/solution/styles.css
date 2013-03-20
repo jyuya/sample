@@ -73,6 +73,8 @@ html {
 	text-transform: none;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
+	text-shadow: 5px 5px 5px #000;
+	font-size: 140%;
 }
 
 
@@ -95,7 +97,6 @@ body {
 .photoSet {
 	max-width: 3200px; /*max size photo x 4*/
 	margin: 0 auto;
-	background: #000;
 }
 
 h1 {
@@ -104,14 +105,13 @@ h1 {
 	color: #fff;
 	letter-spacing: 0.2em;
 	font-weight: bold;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	margin: 20px auto 0 auto;
+	margin: 0 auto;
 }
 
 .photoList {
 	width: 100%;
 	overflow: hidden;
+	background: #000;
 }
 
 .photoList li {
@@ -130,13 +130,10 @@ h1 {
 
 .handle {
 	position: absolute;
-	bottom: 0px;
-	left: 0px;
+	top: 45%;
+	left: 3%;
 	color: #fff;
 	font-family: "General Foundicons";
-	background: #000;
-	height: 100%;
-	padding: 30% 2% 0 2%;
 	-webkit-transition: -webkit-transform 0.5s ease-out;
 	-webkit-transform: translateX(-100px);
 }
@@ -155,5 +152,9 @@ h1 {
 
 .dragging img {
 	 -webkit-filter: contrast(1) grayscale(1) opacity(0.8);
+}
+
+.dragIcon {
+	width: 100px;
 }
 

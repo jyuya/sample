@@ -6,21 +6,43 @@
 	
 	// create the photo list from provided images
 	function renderImages() {
-		
+		var listItems = document.querySelectorAll("li");
+		for (var z=0; z < listItems.length; z++) {
+			listItems[z].setAttribute("draggable", "true");
+			var listItemImage = listItems[z].querySelector("img");
+			listItemImage.setAttribute("draggable", "false");
+		}
+				
 	};
 	
 	// drag start
 	function handleDragStart(e) {
-		currentDragLi = e.target.parentElement; // the li and not the img
+		console.log(e.target);
+		currentDragLi = e.target; 
+		// e.preventDefault();
+		
+		// var dragIcon = document.createElement('img');
+		// dragIcon.classList.add("dragIcon");
+		// dragIcon.src = 'images/test.jpg';
+		
+		// dragIcon.src = e.target.src;
+		// 
+		// console.log(dragIcon);
+		// var test = document.querySelector("h1");
+		// test.appendChild(dragIcon);
+
 		e.dataTransfer.effectAllowed = 'move';
 		e.dataTransfer.setData('text/html', currentDragLi.innerHTML);
+
+		// e.dataTransfer.setDragImage(dragIcon, -10, -10);
+
 		currentDragLi.classList.add('dragging');
 		return false;
 	};
 	
 	// drag end
 	function handleDragEnd(e) {
-		e.target.parentElement.classList.remove('dragging');
+		e.target.classList.remove('dragging');
 		return false;
 	};
 	
@@ -49,11 +71,12 @@
 		e.stopPropagation();
 		e.preventDefault();
 		
-		e.target.parentElement.classList.remove("over"); // this is the targeted img with a over element
+		e.target.classList.remove("over"); // this is the targeted img with a over element
 
-		if (currentDragLi !== e.target.parentElement) {
+		if (currentDragLi !== e.target) {
 			currentDragLi.classList.remove("dragging");
 			e.target.parentElement.classList.remove("dragging");
+			
 			currentDragLi.innerHTML = e.target.parentElement.innerHTML; // these are li
 			e.target.parentElement.innerHTML = e.dataTransfer.getData('text/html');
 		} 
@@ -70,7 +93,7 @@
 		photoList.addEventListener('drop', handleDrop, false);
 	}
 	
-	// detect feature of native drag/drop
+	renderImages();
 	setupDragDrop();
 	
 }());
