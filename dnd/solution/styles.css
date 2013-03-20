@@ -1,0 +1,159 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/** ---------------------------- normalize
+*/
+html {
+    font-size: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('icomoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+/* ==========================================================================
+   photo sort styles
+   ========================================================================== */
+
+body {
+	font-family: Helvetica;
+	color: #444;
+	background: #efefef;
+}
+
+[draggable] {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.photoSet {
+	max-width: 3200px; /*max size photo x 4*/
+	margin: 0 auto;
+	background: #000;
+}
+
+h1 {
+	padding: 10px;
+	background: #000;
+	color: #fff;
+	letter-spacing: 0.2em;
+	font-weight: bold;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	margin: 20px auto 0 auto;
+}
+
+.photoList {
+	width: 100%;
+	overflow: hidden;
+}
+
+.photoList li {
+	width: 25%;
+	overflow: hidden;
+	float: left;
+	position: relative;
+}
+
+.photoList img {
+	display: block;
+	width: 100%;
+	cursor: move;
+	-webkit-transition: -webkit-filter 0.5s ease;
+}
+
+.handle {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	color: #fff;
+	font-family: "General Foundicons";
+	background: #000;
+	height: 100%;
+	padding: 30% 2% 0 2%;
+	-webkit-transition: -webkit-transform 0.5s ease-out;
+	-webkit-transform: translateX(-100px);
+}
+
+.over .handle {
+	-webkit-transform: translateX(0);
+}
+
+.over img {
+	-webkit-filter: blur(3px);
+}
+
+.photoList .dragging .handle {
+	-webkit-transform: translateX(-100px);
+}
+
+.dragging img {
+	 -webkit-filter: contrast(1) grayscale(1) opacity(0.8);
+}
+
