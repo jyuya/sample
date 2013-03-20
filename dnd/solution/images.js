@@ -1,40 +1,27 @@
 (function() {
     var imageFilenames = ["dsc_6001.jpg", "dsc_6081.jpg", "dsc_6013.jpg", "dsc_6268.jpg", "dsc_6397.jpg", "dsc_6345.jpg", "dsc_6378.jpg", "dsc_6413.jpg", "dsc_6417.jpg"],
 		imagePath = "images/",
+		thumbPath = "images/thumb/",
 		photoList = document.querySelector('#myPhotos'),
 		currentDragLi = null;
 	
 	// create the photo list from provided images
 	function renderImages() {
-		var listItems = document.querySelectorAll("li");
-		for (var z=0; z < listItems.length; z++) {
-			listItems[z].setAttribute("draggable", "true");
-			var listItemImage = listItems[z].querySelector("img");
-			listItemImage.setAttribute("draggable", "false");
-		}
+
 				
 	};
 	
 	// drag start
 	function handleDragStart(e) {
-		console.log(e.target);
-		currentDragLi = e.target; 
-		// e.preventDefault();
-		
-		// var dragIcon = document.createElement('img');
-		// dragIcon.classList.add("dragIcon");
-		// dragIcon.src = 'images/test.jpg';
-		
-		// dragIcon.src = e.target.src;
-		// 
-		// console.log(dragIcon);
-		// var test = document.querySelector("h1");
-		// test.appendChild(dragIcon);
+		currentDragLi = e.target.parentElement; 
+
+		var dragIcon = document.createElement('img');
+		dragIcon.src = thumbPath + e.target.src.split("/").pop();
 
 		e.dataTransfer.effectAllowed = 'move';
 		e.dataTransfer.setData('text/html', currentDragLi.innerHTML);
 
-		// e.dataTransfer.setDragImage(dragIcon, -10, -10);
+		e.dataTransfer.setDragImage(dragIcon, 100, 100);
 
 		currentDragLi.classList.add('dragging');
 		return false;
@@ -42,7 +29,7 @@
 	
 	// drag end
 	function handleDragEnd(e) {
-		e.target.classList.remove('dragging');
+		e.target.parentElement.classList.remove('dragging');
 		return false;
 	};
 	
@@ -75,10 +62,18 @@
 
 		if (currentDragLi !== e.target) {
 			currentDragLi.classList.remove("dragging");
-			e.target.parentElement.classList.remove("dragging");
+			e.target.parentElement.classList.remove("over");
 			
-			currentDragLi.innerHTML = e.target.parentElement.innerHTML; // these are li
-			e.target.parentElement.innerHTML = e.dataTransfer.getData('text/html');
+			var newLi = document.createElement("li");
+			newLi.innerHTML = currentDragLi.innerHTML;	
+			photoList.insertBefore(newLi, e.target.parentElement);
+			photoList.removeChild(currentDragLi);
+			
+			// console.log(currentDragLi);
+			// console.log(e.target.parentElement);
+			// 
+			// currentDragLi.innerHTML = e.target.parentElement.innerHTML; // these are li
+			// e.target.parentElement.innerHTML = e.dataTransfer.getData('text/html');
 		} 
 		return false;
 	}
