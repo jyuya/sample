@@ -3,12 +3,19 @@
 	the photos can be reordered by drag
 	the order is not saved
 	
+	ASSUMPTIONS: for timing consideration...
 	ASSUME: safari 6.0.3 only supported browser
+	ASSUME: no mobile support with touch
 	ASSUME: no need to test image loaded since dealing with local images
-	ASSUME: this code does not support changes to the HTML
+	ASSUME: no thumbnails 
+	ASSUME: this code does not support changes to the HTML structure
 	ASSUME: trimming off 2% of the images is ok as blur is wack
 	
-	NOTE: safari bug causes filtered images to darken and lighten when hovered over
+	NOTE: using native HTML5 drap drop api
+	NOTE: using more than 1 css filter causes rendering issues in safari
+		such as image redraw/flickr and opacity/color change when dragstart/dragend
+	
+	by Julia Yu 3/20/2013
 */
 
 (function() {
@@ -33,8 +40,13 @@
 		currentDragLi = e.target.parentElement; // current li being dragged, img is target
 		afterLi = currentDragLi.nextSibling; // who is behind the current
 		
+		var dragImage = document.createElement("img");
+		dragImage.src = "https://twitter.com/images/resources/twitter-bird-light-bgs.png";
+		
 		e.dataTransfer.effectAllowed = 'move';
 		e.dataTransfer.setData('Text', currentDragLi.innerHTML);
+		e.dataTransfer.setDragImage(dragImage, 100, 100);
+		
 		currentDragLi.classList.add('dragging');
 		return false;
 	};
@@ -45,17 +57,15 @@
 		return false;
 	};
 	
-	// drag enter, add drag over styles and add last item handler if needed
+	// drag enter, add drag over styles and add last li handler if needed
 	function handleDragEnter(e) {		
 		e.preventDefault();
 		if (e.srcElement !== photoList) {
 			clearHandle();
 			if (e.target.parentElement) {
-				e.target.parentElement.classList.add('over');
-			}
-			
+				e.target.parentElement.classList.add('over'); 
+			}	
 		} else {
-			// find last child and add
 			var lastLi = document.querySelector("li:last-child");			
 			lastLi.appendChild(tempHandle);			
 		}
@@ -81,6 +91,7 @@
 		e.preventDefault();
 		clearHandle();
 		
+		
 		var targetLi = e.target.parentElement; // shorthand
 		
 		// we're not dragging in place or trying to insert before the guy standing after us
@@ -102,7 +113,7 @@
 				photoList.removeChild(currentDragLi);
 			}
 						
-			// do some animation on insert for the lols
+			// do some animation on insert for the lols, pause for dom insert
 			setTimeout(function(){	
 				// clear animation classes after its done
 				newLi.addEventListener('webkitTransitionEnd', function(){
@@ -142,7 +153,6 @@
 	// ----------- make our images and start the drag 
 	renderImages();
 	setupDragSort();
-	
 }());
 
 
