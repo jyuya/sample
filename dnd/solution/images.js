@@ -116,7 +116,7 @@
 				photoList.removeChild(currentDragLi);
 			}
 						
-			// do some animation on insert for the lols, pause for dom insert
+			// do some animation on insert after pretending to check the element is added
 			setTimeout(function(){	
 				// clear animation classes after its done
 				newLi.addEventListener('webkitTransitionEnd', function(){
