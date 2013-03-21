@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=utf-8 />
+<title>Basic Drag and Drop</title>
+<style>
+#drop {
+  min-height: 100px;
+  width: 200px;
+  border: 3px dashed #ccc;
+  margin: 10px;
+  padding: 10px;
+  clear: left;
+}
+p {
+  margin: 3px 0;
+}
+#rem {
+  background: url(http://twitter.com/api/users/profile_image/rem) no-repeat;
+}
+#brucel {
+  background: url(http://twitter.com/api/users/profile_image/brucel) no-repeat;
+}
+#Rich_Clark {
+  background: url(http://twitter.com/api/users/profile_image/Rich_Clark) no-repeat;
+}
+#leads {
+  background: url(http://twitter.com/api/users/profile_image/leads) no-repeat;
+}
+#akamike {
+  background: url(http://twitter.com/api/users/profile_image/akamike) no-repeat;
+}
+#jackosborne {
+  background: url(http://twitter.com/api/users/profile_image/jackosborne) no-repeat;
+}
+.drag {
+  height: 48px;
+  width: 48px;
+  float: left;
+  -khtml-user-drag: element;
+  margin: 10px;
+}
+</style>
+<script src="http://html5demos.com/h5utils.js"></script>
+</head>
+<body>
+  <div class="drag" id="rem" draggable="true"></div>
+  <div class="drag" id="brucel" draggable="true"></div>
+  <div class="drag" id="Rich_Clark" draggable="true"></div>
+  <div class="drag" id="leads" draggable="true"></div>
+  <div class="drag" id="akamike" draggable="true"></div>
+  <div class="drag" id="jackosborne" draggable="true"></div>
+  
+  <div id="drop"></div>
+</body>
+</html>

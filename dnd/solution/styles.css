@@ -57,6 +57,10 @@ html {
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+/* ==========================================================================
+   photo sort styles
+   ========================================================================== */
+
 @font-face {
 	font-family: 'icomoon';
 	src:url('icomoon.ttf') format('truetype');
@@ -76,11 +80,6 @@ html {
 	text-shadow: 5px 5px 5px #000;
 	font-size: 140%;
 }
-
-
-/* ==========================================================================
-   photo sort styles
-   ========================================================================== */
 
 body {
 	font-family: Helvetica;
@@ -114,16 +113,21 @@ h1 {
 	background: #000;
 }
 
+/** ---------------------------- the photo drag element
+*/
 .photoList li {
 	width: 25%;
 	overflow: hidden;
 	float: left;
 	position: relative;
+	-webkit-perspective-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
 }
 
 .photoList img {
 	display: block;
-	width: 100%;
+	width: 106%;
+	margin-left: -2%;
 	cursor: move;
 	-webkit-transition: -webkit-filter 0.5s ease;
 }
@@ -135,20 +139,24 @@ h1 {
 	height: 100%;
 	padding: 30% 0 0 0;
 	color: #fff;
-	font-family: "General Foundicons";
-	-webkit-transition: -webkit-transform 0.5s ease-out;
+	-webkit-transition: -webkit-transform 0.3s ease-out;
 	-webkit-transform: translateX(-100px);
 	border-left: solid 15px #000;
 }
 
+/** ---------------------------- on an item dragged over something
+*/
 .over .handle {
 	-webkit-transform: translateX(0);
 }
 
 .over img {
 	-webkit-filter: blur(3px);
+/*	-webkit-filter: opacity(0.8);*/
 }
 
+/** ---------------------------- on an item being dragged
+*/
 .photoList .dragging .handle {
 	-webkit-transform: translateX(-100px);
 }
@@ -157,3 +165,13 @@ h1 {
 	 -webkit-filter: contrast(1) grayscale(1) opacity(0.8);
 }
 
+/** ---------------------------- on insert
+*/
+.photoList li.invis img {
+	-webkit-transform: translateX(106%);
+	-webkit-transition: -webkit-transform 0.5s ease;	
+}
+
+.photoList li.vis img {
+	-webkit-transform: translateX(-2%);
+}
