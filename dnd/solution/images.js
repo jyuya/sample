@@ -39,14 +39,10 @@
 	function handleDragStart(e) {
 		currentDragLi = e.target.parentElement; // current li being dragged, img is target
 		afterLi = currentDragLi.nextSibling; // who is behind the current
-		
-		var dragImage = document.createElement("img");
-		dragImage.src = "https://twitter.com/images/resources/twitter-bird-light-bgs.png";
-		
+
 		e.dataTransfer.effectAllowed = 'move';
 		e.dataTransfer.setData('Text', currentDragLi.innerHTML);
-		e.dataTransfer.setDragImage(dragImage, 100, 100);
-		
+
 		currentDragLi.classList.add('dragging');
 		return false;
 	};

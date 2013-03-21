@@ -30,6 +30,8 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	width: 100%;
+	background: red;
 }
 ol, ul {
 	list-style: none;
@@ -97,12 +99,12 @@ h1 {
 	letter-spacing: 0.2em;
 	font-size: 1.2em;
 	margin: 0 auto;
+	width: 100.4%;
 }
 
 .photoList {
-	width: 100%;
+	width: 100.4%;
 	overflow: hidden;
-	
 }
 
 [draggable] {
