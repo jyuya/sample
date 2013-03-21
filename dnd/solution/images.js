@@ -61,11 +61,15 @@
 	function handleDragEnter(e) {		
 		e.preventDefault();
 		if (e.srcElement !== photoList) {
-			clearHandle();
-			if (e.target.parentElement) {
-				e.target.parentElement.classList.add('over'); 
-			}	
+			// not dragging into photoList and not dragging into the one after us
+			if (e.toElement.parentElement !== afterLi) {
+				clearHandle();
+				if (e.target.parentElement) {
+					e.target.parentElement.classList.add('over'); 
+				}
+			}
 		} else {
+			// dragging into empty space means append possibly?
 			var lastLi = document.querySelector("li:last-child");			
 			lastLi.appendChild(tempHandle);			
 		}
@@ -90,8 +94,7 @@
 		e.stopPropagation();
 		e.preventDefault();
 		clearHandle();
-		
-		
+				
 		var targetLi = e.target.parentElement; // shorthand
 		
 		// we're not dragging in place or trying to insert before the guy standing after us
