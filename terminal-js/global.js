@@ -347,7 +347,6 @@ FOC.Stores = function (D) {
 		};
 		
 		$(storeList).bind("webkitTransitionEnd", handleTransitEnd);
-		$(storeList).bind("transitionend", handleTransitEnd);
 		
 		$("body").css("visibility", "visible");
 	};

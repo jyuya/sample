@@ -87,27 +87,20 @@ h1 {
 	text-align: center;
 	background: #000;
 	-webkit-transform: translateZ(0);
-	transform: translateZ(0);
 }
 
 .top .tile {
 	bottom: 0;
 	-webkit-transform: translateY(0);
 	-webkit-transform-origin: 0% 0%;
-	-webkit-transition: height 0.5s ease, -webkit-transform 0.5s ease;
-	transform: translateY(0);
-	transform-origin: 0% 0%;
-	transition: height 0.5s ease, -webkit-transform 0.5s ease;
+	-webkit-transition: height 1s ease, -webkit-transform 1s ease;
 }
 
 .bottom .tile {
-	top: -1px;	
+	top: 0;	
 	-webkit-transform: translateY(0);
 	-webkit-transform-origin: 100% 100%;
-	-webkit-transition: height 0.5s ease, -webkit-transform 0.5s ease;
-	transform: translateY(0);
-	transform-origin: 100% 100%;
-	transition: height 0.5s ease, -webkit-transform 0.5s ease;
+	-webkit-transition: height 1s ease, -webkit-transform 1s ease;
 }
 
 .top .old .tile {
@@ -133,11 +126,9 @@ h1 {
 
 #stores .tileShow {
 	-webkit-transform: translateY(0);
-	transform: translateY(0);
-	height: 24px;
+	height: 54px;
 }
 
 .notransition {
-	-webkit-transition: none !important;
-	transition: none !important;
+  -webkit-transition: none !important;
 }

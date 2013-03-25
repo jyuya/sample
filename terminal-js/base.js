@@ -388,7 +388,7 @@ FOC.Stores = function(){
 	*/
 	var autoShow = function() {
 		// actually we'll just kick off a and do it through the event listener for animate done
-		generateList("a");
+		generateList("i");
 	}
 		
 	return {
@@ -397,11 +397,11 @@ FOC.Stores = function(){
 			getStores();	
 			setupSelect();			
 			generateBoard();	
-			autoShow();
+			// autoShow();
 		}
 	}
 }();
 
 $(document).ready(function(){
-	FOC.Stores.init();
+	// FOC.Stores.init();
 });
