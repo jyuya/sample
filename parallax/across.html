@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta charset="utf-8" /> 
+	<title>Julia Parallax test</title>
+
+	<!--[if lte IE 8]>
+	<script type="text/javascript" src="scripts/html5.js" ></script>
+	<![endif]-->
+	
+	<script type="text/javascript">
+		/* ASSUME:
+			all sides have an unique id (since you need to scroll to them usually)
+			all animation objects have an unique id
+			all animation objects have the class "hasAnimation"
+			a single parallax is enclosed by class "hasPara"
+			the slides group is enclosed by class "viewGroup"
+			a single slide is indicated by class "viewGroupItem"
+			data-animate is kind of a hack to re use animations
+			animation objects of a slide are to be first level children
+		*/
+	
+		//the parallax settings
+		window.Parallax = window.Parallax || {};
+		
+		// animation for the parallax objects
+		Parallax.Animate = {
+			"goright" : { inertia: 0.3, animate : "y", ydir : "down", xdir: "right", startY: 0, startX: 0 },
+			"downdown" : { inertia: 0.3, animate : "xy", xdir: "right", ydir: "down", startY: 0, startX: 0 }
+		}
+		
+		// settings for each parallax scroller
+		Parallax.Setting = {
+			"defaultWindow" : {
+				viewEvent : "showing",	// this is the class name for inview
+				container : "window",	// on what container do we put this thing
+				direction : "horizontal",	// parallax scroll bar direction
+				knowWhenShown : true,	// create events for detecting if slide is in view
+				percentThreshold : 100	// the percent threshold to trigger all there
+			}
+		}
+
+	</script>
+	
+	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js'></script>
+	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js'></script>
+	<script src="scripts/jquery.bganimate.js" type="text/javascript" ></script>
+	<script src="scripts/jquery.localscroll.js" type="text/javascript" ></script>
+	<script src="scripts/jquery.scrollTo.js" type="text/javascript" ></script>
+	
+	<script type='text/javascript' src='scripts/global.js' ></script>
+	
+	<link type="text/css" href="base.css" rel="stylesheet" /> 
+	<link type="text/css" href="across.css" rel="stylesheet" /> 
+</head>
+
+<body class="hasPara">
+	
+	<nav class="viewNav">
+		<ul>
+			<li><a href="#intro" title="Next"><span>intro</span></a></li>
+		    <li><a href="#one" title="Next"><span>one</span></a></li>
+		    <li><a href="#two" title="Next"><span>two</span></a></li>
+		    <li><a href="#three" title="Next"><span>three</span></a></li>
+		    <li><a href="#four" title="Next"><span>four</span></a></li>
+		</ul>
+	</nav>
+	
+	<section class="viewGroup">
+		<!-- article intro -->
+		<article id="intro" class="viewGroupItem">
+			<div class="textBox">
+				<p>intro If you never dreamed of driving a huge tank fitted with a giant chainsaw while growing up, then congratulations on having been a well-adjusted kid. As for the rest of us? Well, people like us grew up and built these machines for real. That's why right this moment, somebody somewhere is behind the wheel of ...</p>	
+			</div>
+			<div class="inviewPercentage">0%</div>
+			<div class="inviewNote">not in view</div>
+			
+				<img id="dino1" class="hasAnimation animateObject" src="images/dino_orange.png" data-animate="downdown"/>
+
+		</article>
+		
+		<!-- article one -->
+		<article id="one" class="viewGroupItem" >
+			<div class="textBox">
+				<p>1 If you never dreamed of driving a huge tank fitted with a giant chainsaw while growing up, then congratulations on having been a well-adjusted kid. As for the rest of us? Well, </p>
+			</div>
+			<div class="inviewPercentage">0%</div>
+			<div class="inviewNote">not in view</div>
+			
+				<img id="dino2" class="hasAnimation animateObject" src="images/dino_orange.png" data-animate="downdown"/>
+			
+		</article>
+		
+		<!-- article two -->
+		<article id="two" class="viewGroupItem" >
+			<div class="textBox">
+				<p>2 which at its deepest can dig down 24 feet and as wide as 5 feet. This should give you a good foothold for building a subterranean lair.</p>
+			</div>
+			<div class="inviewPercentage">0%</div>
+			<div class="inviewNote">not in view</div>
+			<img id="dino3" class="hasAnimation animateObject" src="images/dino_orange.png" data-animate="downdown"/>
+		</article>
+		
+		<!-- article three -->
+		<article id="three" class="viewGroupItem">
+			<div class="textBox">
+				<p>3 Now, as terrifying as it looks, it can only go through dirt -- it won't help you cut through solid rock. No, for that you'd need ...</p>
+			</div>
+			<div class="inviewPercentage">0%</div>
+			<div class="inviewNote">not in view</div>
+			<img id="dino4" class="hasAnimation animateObject" src="images/dino_orange.png" data-animate="downdown"/>
+		</article>
+		
+		<!-- article four -->
+		<article id="four" class="viewGroupItem">
+			<div class="textBox">
+				<p>4 This looks like something The Shredder built to rob banks, or a vehicle from a future world where the only currency is violence.</p>
+			</div>
+			<div class="inviewPercentage">0%</div>
+			<div class="inviewNote">not in view</div>
+			<img id="dino5" class="hasAnimation animateObject" src="images/dino_orange.png" data-animate="downdown"/>
+		</article>
+	</section>
+	
+	
+</body>
+</html>

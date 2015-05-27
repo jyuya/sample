@@ -1,0 +1,16 @@
+
+#inside {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	height: 700px;
+	margin: 10px auto;
+}
+
+section {
+	width: 5000px;
+}
+
+article {
+	width: 800px;
+	float: left;
+}

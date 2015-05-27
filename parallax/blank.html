@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta charset="utf-8" /> 
+	<title>Julia Parallax test</title>
+
+	<!--[if lte IE 8]>
+	<script type="text/javascript" src="scripts/html5.js" ></script>
+	<![endif]-->
+	
+	
+	
+	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js'></script>
+	<script src="scripts/jquery.localscroll.js" type="text/javascript" ></script>
+	<script src="scripts/jquery.scrollTo.js" type="text/javascript" ></script>
+	<script type='text/javascript' src='scripts/global.js' ></script>
+	
+	
+	<script type="text/javascript">
+		window.Test = window.Test || {};
+		
+		Test.Para = function() {
+			var name = "default";
+			
+			return {
+				init : function(initname){	
+					name = initname;
+					console.log(name + " initializing new para");	
+				},
+				setName : function(newname) {
+					name = newname;
+				},
+				getName : function() {
+					return name;
+				},
+			}
+		}
+		
+		Test.Main = function(){
+			return {
+				init : function(){		
+					console.log("test init");
+					
+					var p1 = new Test.Para;
+					p1.init("p1");
+					p1.setName("p1p1p1p1");
+					
+		
+
+				}
+			}
+
+		}();
+		$(document).ready(Test.Main.init);
+		
+		
+	</script>
+	
+	<link type="text/css" href="base.css" rel="stylesheet" /> 
+</head>
+
+<body>
+	testing
+	
+</body></html>

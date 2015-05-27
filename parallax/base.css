@@ -1,0 +1,343 @@
+
+/**
+Reset
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+   margin:0;
+   padding:0;
+   border:0;
+   outline:0;
+   font-size:100%;
+   vertical-align:baseline;
+   background:transparent;
+}
+
+body {
+   line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+   display:block;
+}
+
+nav ul {
+   list-style:none;
+}
+
+blockquote, q {
+   quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content:'';
+   content:none;
+}
+
+a {
+   margin:0;
+   padding:0;
+   font-size:100%;
+   vertical-align:baseline;
+   background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+   background-color:#ff9;
+   color:#000;
+   text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+   background-color:#ff9;
+   color:#000;
+   font-style:italic;
+   font-weight:bold;
+}
+
+del {
+   text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+   border-bottom:1px dotted;
+   cursor:help;
+}
+
+table {
+   border-collapse:collapse;
+   border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+   display:block;
+   height:1px;
+   border:0;
+   border-top:1px solid #cccccc;
+   margin:1em 0;
+   padding:0;
+}
+
+input, select {
+   vertical-align:middle;
+}
+
+ol, ul, li {
+       list-style: none;
+       overflow: hidden;
+}
+
+article,
+header,
+footer,
+aside,
+hgroup {
+       overflow: hidden;
+}
+
+/** GLOBAL
+*/
+
+body {
+       font-family: Arial;
+       font-size: 12px;
+		background: #ccc;
+}
+
+a {
+       text-decoration: none;
+       color: #00598C;
+}
+
+/** NAV
+*/
+
+nav {
+	position: fixed;
+	right: 10px;
+	top: 100px;
+	z-index: 100;
+}
+
+nav li {
+	margin: 5px 10px;
+}
+
+nav li a {
+	display: block;
+	width: 16px;
+	height: 16px;
+	background: #fff;
+	position: relative;
+	-moz-border-radius: 16px;
+	border-radius: 16px;
+	border: solid 2px #000;
+	overflow:hidden;
+}
+
+nav li a span {
+	width: 16px;
+	height: 16px;
+	background: #00598C;
+	opacity: 0.8;
+	color: #fff;
+	text-indent: -999em;
+/*	-moz-border-radius: 16px;
+	border-radius: 16px;*/
+	display: none;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+
+/** ARTICLE
+*/
+
+article {
+	height: 800px;
+ 	background-attachment:fixed;
+	position: relative;
+}
+
+article .textBox {
+	width: 500px;
+	position: absolute;
+	top: 200px;
+	left: 50px;
+	padding: 10px;
+	background-color: rgba(185,185,185,0.5);
+}
+
+article p {
+	font-size: 20px;
+}
+
+#intro {
+	background-image: url(images/metal.jpg);
+/*	border: solid 3px red;*/
+}
+
+#one {
+	background-image: url(images/metalblue.jpg);
+/*	border: solid 3px blue;*/
+}
+
+#two {
+	background-image: url(images/reallyyellow.jpg);
+/*	border: solid 3px green;*/
+}
+
+#three {
+	background-image: url(images/stroke.jpg);
+/*	border: solid 3px yellow;*/
+}
+
+#four {
+	background-image: url(images/red.jpg);
+/*	border: solid 3px pink;*/
+}
+
+.inviewPercentage {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-size: 100px;
+	color: #fff;
+}
+
+.inviewNote {
+	position: absolute;
+	top: 10px;
+	left: 300px;
+	font-size: 80px;
+	color: #ffcc00;
+}
+
+.animateObject {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+/*	border: solid 1px blue;*/
+}
+
+.neko {
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url("images/neko.png") no-repeat fixed 0 0;
+}
+
+#textblock1 {
+	width: 600px;
+	height: 500px;
+	background-color: #666;
+	opacity: 0.8;
+	overflow: scroll;
+	overflow-x: hidden;
+	padding: 10px;
+	color: #fff;
+}
+
+#nested {
+	margin-top: 300px;
+	border: solid 2px #000;
+	background: #000;
+	padding: 0;
+	position: relative;
+	width: 80%;
+	overflow: hidden;
+	
+}
+
+#nextedIntro {
+	color: #000;
+	font-size: 20px;
+	height: 500px;
+	overflow: hidden;
+	width: 100%;
+	overflow-x: scroll;
+	position: relative;
+}
+
+#nextedIntro ul {
+	width: 4200px;
+	height: 450px;
+	overflow: hidden;
+}
+
+#nextedIntro li {
+	float: left;
+	display: block;
+	margin: 10px 0px;
+	padding: 10px;
+	width: 500px;
+	height: 400px;
+	position: relative;
+}
+
+#nextedIntro li .inviewPercentage {
+	font-size: 40px;
+	color: #666;
+	left: 200px;
+}
+
+#nextedIntro li .inviewNote {
+	font-size: 30px;
+}
+
+
+#n1 {
+	background-image: url(images/church.jpg);
+	
+}
+#n2 {
+	background-image: url(images/federalhill.jpg);
+}
+#n3 {
+	background-image: url(images/starrywisdom.jpg);
+}
+#n4 {
+	background-image: url(images/yellow.jpg);
+}
+#n5 {
+	background-image: url(images/pale.jpg);
+}
+#n6 {
+	background-image: url(images/reallyyellow.jpg);
+}
+#n7 {
+	background-image: url(images/metal.jpg);
+}
+#n8 {
+	background-image: url(images/metalblue.jpg);
+}
+
+#nested .viewNav {
+	position: absolute;
+	top: 0px;
+	left: 50%;
+}
+
+#nested .viewNav li {
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+
