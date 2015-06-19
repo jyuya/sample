@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Filters</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+        body {
+            font:  16px/1.4 Helvetica, Arial;
+            color: #666;
+        }
+
+
+
+    </style>
+  </head>
+  <body> 
+
+    <article>
+        <h1>Filters</h1>
+        <div id="filters"></div>
+        <div id="output">output</div>
+    </article>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="filters.js"></script>
+    <script>
+
+    Samples.DATA = {};
+    Samples.DATA.MAX = 3; // how many filters max
+    Samples.DATA.selected = []; // preselect filters
+
+    Samples.DATA.options = [
+        { 
+            label: "People That Are",
+            index : "people",
+            options: { 
+                "supporters-all" : "Supporters (all)",
+                "supporters-more" : "Supporters (more than one purchase)", 
+                "supporters-one" : "Supporters (one purchase)", 
+                "followers" : "Followers (no purchases)"
+            }
+        },
+        { 
+            label: "Subscribers That Are",
+            index : "subscriber",
+            options: { 
+                "subs-active" : "Active", 
+                "subs-inactive" : "Inactive", 
+                "subs-expired" : "Expired",
+                "declined" : "Declined"
+            }
+        },
+        { 
+            label: "Made a Purchase In",
+            index : "purchase",
+            options: { 
+                "last-month" : "The Last Month", 
+                "last-quarter" : "The Last Quarter", 
+                "last-year" : "The Last Year" 
+            }
+        }
+    ]
+     
+    </script>
+  </body>
+</html>
